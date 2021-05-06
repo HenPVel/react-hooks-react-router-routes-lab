@@ -1,8 +1,16 @@
 import React from "react";
 import { actors } from "../data";
+import ActorCard from "./ActorCard"
 
 function Actors() {
-  return <div>{/*{code here}*/}</div>;
-}
+
+  let actorElements = actors.map( actor => <ActorCard {...actor} />)
+
+  return (
+    <div>
+      <h1>Actors Page</h1>
+      {actorElements}
+    </div>
+  )}
 
 export default Actors;
