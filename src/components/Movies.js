@@ -1,8 +1,17 @@
 import React from "react";
 import { movies } from "../data";
+import MovieCard from "./MovieCard"
 
 function Movies() {
-  return <div>{/*{code here}*/}</div>;
-}
+
+  let movieElements = movies.map(movie => <MovieCard {...movie}/>)
+
+  return (
+    <div>
+      <h1>Movies Page</h1>
+      <br></br>
+    {movieElements}
+    </div>
+  )}
 
 export default Movies;
